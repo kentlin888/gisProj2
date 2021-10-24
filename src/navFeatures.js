@@ -4,18 +4,18 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 const navFeatures = [{
-    title: "Category 1",
+    title: "天幕協查",
     icon: <ListItemIcon/>,
     lists: [
         {
-            listTitle: "List A-1",
+            listTitle: "Home",
             icon: "icon",
-            path: "/"
+            path: "/Home"
         },
         {
-            listTitle: "List A-2",
+            listTitle: "About",
             icon: "icon",
-            path: "/"
+            path: "/About"
         },
         {
             listTitle: "List A-3",
@@ -25,7 +25,7 @@ const navFeatures = [{
     ]
 },
 {
-    title: "Category 2",
+    title: "案件情資",
     icon: <ListItemIcon/>,
     lists: [
         {
@@ -56,7 +56,95 @@ const navFeatures = [{
     ]
 },
 {
-    title: "Category 3",
+    title: "ETC系統",
+    icon: <ListItemIcon/>,
+    lists: [
+        {
+            listTitle: "ETC行車紀錄",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "拋查",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "注偵設定",
+            icon: "icon",
+            path: "/"
+        }
+    ]
+},
+
+{
+    title: "涉案車輛停車系統",
+    icon: <ListItemIcon/>,
+    lists: [
+        {
+            listTitle: "停車紀錄",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "拋查",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "注偵設定",
+            icon: "icon",
+            path: "/"
+        }
+    ]
+},
+
+{
+    title: "平面道路E-Tag",
+    icon: <ListItemIcon/>,
+    lists: [
+        {
+            listTitle: "平面行車紀錄",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "拋查",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "注偵設定",
+            icon: "icon",
+            path: "/"
+        }
+    ]
+},
+
+{
+    title: "船隻安檢",
+    icon: <ListItemIcon/>,
+    lists: [
+        {
+            listTitle: "船隻進出港紀錄",
+            icon: "icon",
+            path: "/",
+        },
+        // {
+        //     listTitle: "拋查",
+        //     icon: "icon",
+        //     path: "/"
+        // },
+        {
+            listTitle: "注偵設定",
+            icon: "icon",
+            path: "/"
+        }
+    ]
+},
+
+{
+    title: "推播管理中心",
     icon: <ListItemIcon/>,
     lists: [
         {
@@ -75,7 +163,30 @@ const navFeatures = [{
             path: "/"
         }
     ]
-}
+},
+
+
+{
+    title: "地理資訊",
+    icon: <ListItemIcon/>,
+    lists: [
+        {
+            listTitle: "List C-1",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "List C-2",
+            icon: "icon",
+            path: "/"
+        },
+        {
+            listTitle: "List C-3",
+            icon: "icon",
+            path: "/"
+        }
+    ]
+},
 ]
 
 export default navFeatures
