@@ -4,6 +4,7 @@ import navFeatures from './navFeatures.js';
 import ListIcon from '@mui/icons-material/List';
 import { container } from "./styles/indexStyles.js";
 import IndexPage from "./page/IndexPage.jsx";
+import BoatHistory from './page/BoatHistory/BoatHistory.jsx'
 import {
     BrowserRouter as Router,
     Switch,
@@ -36,9 +37,9 @@ export default () => {
                 <div style={{ borderRadius: "14px", backgroundColor: "rgb(255,255,255,1)", position: "absolute", top: "12vh", left: "20%", width: "77%", minHeight: "90vh" }}>
 
                     <Switch>
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" component={BoatHistory} />
                         <Route path="/About" component={About} />
-                        <Route path="/Home" component={Home} />
+                        <Route path="/Home" component={BoatHistory} />
                         
                     </Switch>
                 </div>

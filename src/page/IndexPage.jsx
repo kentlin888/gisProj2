@@ -5,14 +5,17 @@ import ListIcon from '@mui/icons-material/List';
 import { container } from "../styles/indexStyles.js";
 import { Router, Route, hashHistory} from 'react-router'
 import { createBrowserHistory } from 'history'
-const newHistory = createBrowserHistory();
-function Home(){
-    return <div>Home2222</div>
-}
+import BoatHistory from './BoatHistory/BoatHistory.jsx'
 
-function About(){
-    return <div>About</div>
-}
+
+const newHistory = createBrowserHistory();
+// function Home(){
+//     return <div>Home2222</div>
+// }
+
+// function About(){
+//     return <div>About</div>
+// }
 
 export default () => {
     let bgc = "rgb(230,230,230)";
@@ -43,8 +46,8 @@ export default () => {
                             
                         </ul>
                         <hr /> */}
-                        <Route exact path="/" component={Home} />
-                        <Route path="/about" component={About} />
+                        <Route exact path="/" component={BoatHistory} />
+                        <Route path="/about" component={BoatHistory} />
                         {/* <Route path="/Form_boat1" component={Form_boat1} />
                         <Route path="/Form_BoatNotice" component={Form_BoatNotice} />
                         <Route path="/Form_SuspectQuery" component={Form_SuspectQuery} /> */}

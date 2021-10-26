@@ -1,0 +1,25 @@
+@use "node_modules/react-widgets/scss/styles.scss" with ($input-height: 2.5em,
+    // Most component variables are forwarded with a namespace
+    $list-selected-bg: #49c6de,
+);
+
+
+
+
+// .rw-input {
+//     width: 2.5em;
+//     height: 1.5em !important;
+//     line-height: 1.5em !important;
+// }
+
+.rw-input   {
+    //padding-right: 2.5em !important;
+    width: 3.5em !important;
+}
+
+// .rw-numberpicker .rw-select {
+//     width: 2.5em;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
