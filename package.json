@@ -61,17 +61,12 @@
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3",
-
-
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.4",
     "@mui/material": "^5.0.4",
     "express": "^4.17.1",
     "history": "^5.0.1",
-    
-    
     "react-router": "^5.2.1"
-
   }
 }
