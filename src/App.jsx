@@ -5,6 +5,11 @@ import ListIcon from '@mui/icons-material/List';
 import { container } from "./styles/indexStyles.js";
 import IndexPage from "./page/IndexPage.jsx";
 import BoatHistory from './page/BoatHistory/BoatHistory.jsx'
+import BoatNotice from './page/BoatNotice/BoatNotice.jsx'
+import SuspectFilter from './page/SuspectFilter/SuspectFilter.jsx'
+import EtcHistory from './page/EtcHistory/EtcHistory.jsx'
+import ETCNotice from './page/ETCNotice/EtcHistory.jsx'
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -39,7 +44,14 @@ export default () => {
                     <Switch>
                         <Route exact path="/" component={BoatHistory} />
                         <Route path="/About" component={About} />
-                        <Route path="/Home" component={BoatHistory} />
+                        <Route path="/Home" component={Home} />
+                        <Route path="/BoatHistory" component={BoatHistory} />
+                        <Route path="/BoatNotice" component={BoatNotice} />
+                        <Route path="/SuspectFilter" component={SuspectFilter} />
+                        <Route path="/EtcHistory" component={EtcHistory} />
+                        
+                        <Route path="/ETCNotice" component={ETCNotice} />
+                        
                         
                     </Switch>
                 </div>

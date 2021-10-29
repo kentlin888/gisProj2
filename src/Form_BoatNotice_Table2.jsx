@@ -13,19 +13,18 @@ function Editable() {
     const { useState } = React;
     const [selectedRow, setSelectedRow] = useState(null);
 
-    let sampleData={UID:"CT S006650", BoatName:"王泰隆",EffectiveDate:"2020/10/01",
-    StationNameOut:"富基漁港", StationNameIn:"基隆漁港" }
+    let sampleData={userId:"51040", positionTitle:"調查官",name:"許飛燕",   }
     const [columns, setColumns] = useState([
-        { title: '商船統一編號', field: 'UID' },
-        { title: '中文船名', field: 'BoatName'},
-        { title: '出港安檢所', field: 'StationNameOut'},
+        { title: '人事五碼', field: 'userId' },
+        { title: '職稱', field: 'positionTitle'},
+        { title: '姓名', field: 'name'},
         // { title: '簽證出港時間', field: 'StationDateOut'},
-        { title: '進港安檢所', field: 'StationNameIn'},
+        // { title: '進港安檢所', field: 'StationNameIn'},
         // { title: '簽證進港時間', field: 'StationDateIn'},
-        { title: '有效日期', field: 'EffectiveDate'},
-    //     { title: '操作', field: 'doAction', render: rowData => <Button variant="danger" type="submit" className="col-auto">
-    //     取消注偵
-    // </Button> },
+        // { title: '有效日期', field: 'EffectiveDate'},
+        { title: '操作', field: 'doAction', render: rowData => <Button variant="danger" type="submit" className="col-auto">
+        刪除
+    </Button> },
     ]);
     const newDataSet = []
     for(let i=0;i<16;i++){
@@ -74,41 +73,45 @@ function Editable() {
             //     {
             //         icon:"edit",
             //         hidden:true
+            //     },
+            //     {
+            //         icon:"delete",
+            //         hidden:false
             //     }
             // ]}
 
-            editable={{
-                // onRowAdd: newData =>
-                //     new Promise((resolve, reject) => {
-                //         setTimeout(() => {
-                //             setData([...data, newData]);
+            // editable={{
+            //     onRowAdd: newData =>
+            //         new Promise((resolve, reject) => {
+            //             setTimeout(() => {
+            //                 setData([...data, newData]);
 
-                //             resolve();
-                //         }, 1000)
-                //     }),
-                onRowUpdate: (newData, oldData) =>
-                    new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            const dataUpdate = [...data];
-                            const index = oldData.tableData.id;
-                            dataUpdate[index] = newData;
-                            setData([...dataUpdate]);
+            //                 resolve();
+            //             }, 1000)
+            //         }),
+            //     onRowUpdate: (newData, oldData) =>
+            //         new Promise((resolve, reject) => {
+            //             setTimeout(() => {
+            //                 const dataUpdate = [...data];
+            //                 const index = oldData.tableData.id;
+            //                 dataUpdate[index] = newData;
+            //                 setData([...dataUpdate]);
 
-                            resolve();
-                        }, 1000)
-                    }),
-                onRowDelete: oldData =>
-                    new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            const dataDelete = [...data];
-                            const index = oldData.tableData.id;
-                            dataDelete.splice(index, 1);
-                            setData([...dataDelete]);
+            //                 resolve();
+            //             }, 1000)
+            //         }),
+            //     onRowDelete: oldData =>
+            //         new Promise((resolve, reject) => {
+            //             setTimeout(() => {
+            //                 const dataDelete = [...data];
+            //                 const index = oldData.tableData.id;
+            //                 dataDelete.splice(index, 1);
+            //                 setData([...dataDelete]);
 
-                            resolve()
-                        }, 1000)
-                    }),
-            }}
+            //                 resolve()
+            //             }, 1000)
+            //         }),
+            // }}
         />
     )
 }

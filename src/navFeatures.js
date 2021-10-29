@@ -29,30 +29,10 @@ const navFeatures = [{
     icon: <ListItemIcon/>,
     lists: [
         {
-            listTitle: "List B-1",
+            listTitle: "嫌疑人篩選",
             icon: "icon",
-            path: "/"
-        },
-        {
-            listTitle: "List B-2",
-            icon: "icon",
-            path: "/"
-        },
-        {
-            listTitle: "List B-3",
-            icon: "icon",
-            path: "/"
-        },
-        {
-            listTitle: "List B-4",
-            icon: "icon",
-            path: "/"
-        },
-        {
-            listTitle: "List B-5",
-            icon: "icon",
-            path: "/"
-        }
+            path: "/SuspectFilter"
+        },        
     ]
 },
 {
@@ -62,17 +42,17 @@ const navFeatures = [{
         {
             listTitle: "ETC行車紀錄",
             icon: "icon",
-            path: "/"
+            path: "/EtcHistory"
         },
         {
             listTitle: "拋查",
             icon: "icon",
-            path: "/"
+            path: "/EtcHistoryAPI"
         },
         {
             listTitle: "注偵設定",
             icon: "icon",
-            path: "/"
+            path: "/ETCNotice"
         }
     ]
 },
@@ -128,7 +108,7 @@ const navFeatures = [{
         {
             listTitle: "船隻進出港紀錄",
             icon: "icon",
-            path: "/",
+            path: "/BoatHistory",
         },
         // {
         //     listTitle: "拋查",
@@ -138,7 +118,7 @@ const navFeatures = [{
         {
             listTitle: "注偵設定",
             icon: "icon",
-            path: "/"
+            path: "/BoatNotice"
         }
     ]
 },
