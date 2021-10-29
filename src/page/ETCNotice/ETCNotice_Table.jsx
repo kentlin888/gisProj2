@@ -13,16 +13,17 @@ function Editable() {
     const { useState } = React;
     const [selectedRow, setSelectedRow] = useState(null);
 
-    let sampleData={CardId:"ABC-1234", ETagId:"SX25847897",DoorName:"汐止交流道5KM",  PassDateTime:"2020/10/01 15:32:31",
-    StationNameOut:"富基漁港", StationNameIn:"基隆漁港" }
+    let sampleData={CardId:"ABC-1234", ETagId:"SX25847897",DoorName:"汐止交流道5KM",  ExpiredDateTime:"2020/10/01 15:32:31",
+    StationNameOut:"富基漁港", StationNameIn:"基隆漁港",passDirection:"北上" }
     const [columns, setColumns] = useState([
         { title: '車牌', field: 'CardId' },
         { title: 'ETag號碼', field: 'ETagId'},
-        { title: '行經門架', field: 'DoorName'},
+        { title: '通行方向', field: 'passDirection'},
+        { title: '指定門架', field: 'DoorName'},
         // { title: '簽證出港時間', field: 'StationDateOut'},
         // { title: '進港安檢所', field: 'StationNamecIn'},
         // { title: '簽證進港時間', field: 'StationDateIn'},
-        { title: '行經時間', field: 'PassDateTime'},
+        { title: '有效日期', field: 'ExpiredDateTime'},
     //     { title: '操作', field: 'doAction', render: rowData => <Button variant="danger" type="submit" className="col-auto">
     //     取消注偵
     // </Button> },

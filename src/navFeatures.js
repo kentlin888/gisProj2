@@ -64,17 +64,17 @@ const navFeatures = [{
         {
             listTitle: "停車紀錄",
             icon: "icon",
-            path: "/"
+            path: "/CarParkingHistory"
         },
         {
             listTitle: "拋查",
             icon: "icon",
-            path: "/"
+            path: "/CarParkingHistoryAPI"
         },
         {
             listTitle: "注偵設定",
             icon: "icon",
-            path: "/"
+            path: "/CarParkingNotice"
         }
     ]
 },
@@ -86,17 +86,17 @@ const navFeatures = [{
         {
             listTitle: "平面行車紀錄",
             icon: "icon",
-            path: "/"
+            path: "/ETagHistory"
         },
         {
             listTitle: "拋查",
             icon: "icon",
-            path: "/"
+            path: "/ETagHistoryAPI"
         },
         {
             listTitle: "注偵設定",
             icon: "icon",
-            path: "/"
+            path: "/ETagNotice"
         }
     ]
 },
