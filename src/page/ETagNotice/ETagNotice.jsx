@@ -4,8 +4,9 @@ import { Form, Button, Dropdown, DropdownButton, Card, InputGroup, FormControl, 
 // import TextField from '@material-ui/core/TextField';
 import './Form_boat1.scss'
 // import { ThemeProvider, StylesProvider, jssPreset, makeStyles, createStyles } from '@material-ui/core/styles'
-import ETCNotice_Table from './ETCNotice_Table.jsx'
-import Form_BoatNotice_Table2 from './Form_BoatNotice_Table2.jsx'
+import ETCNotice_Table from './ETagNotice_Table.jsx'
+import Form_BoatNotice_Table2 from './ETagNotice_Table2.jsx'
+import ReqiuredFieldIcon from '../../component/ReqiuredFieldIcon'
 
 
 export default function Example() {
@@ -26,26 +27,27 @@ export default function Example() {
                             <div className="col-12">
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text id="basic-addon1">車牌</InputGroup.Text>
-                                    {/* <select className="form-select" aria-label="Default select example" defaultValue="0">
+                                    <select className="form-select" aria-label="Default select example" defaultValue="0">
                                         <option value="0">請選擇</option>
                                         <option value="1">ABC-1234</option>
                                         <option value="2">CGF-8754</option>
-                                        
-                                    </select> */}
+
+                                    </select>
                                     <FormControl placeholder="範例: ABC-1234" />
-                                    <InputGroup.Text id="basic-addon1">ETag號碼</InputGroup.Text>
-                                    {/* <select className="form-select" aria-label="Default select example" defaultValue="0">
-                                        <option value="0">請選擇</option>
-                                        <option value="1">ABC-1234</option>
-                                        <option value="2">CGF-8754</option>
-                                        
-                                    </select> */}
-                                    <FormControl placeholder="範例: SX25847897" />
+                                    <InputGroup.Text >所屬縣市</InputGroup.Text>
+                                    <select className="form-select" aria-label="Default select example" defaultValue="0">
+                                        <option value="0">不指定</option>
+                                        <option value="1">臺北市</option>
+                                        <option value="2">新北市</option>
+                                        <option value="2">高雄市</option>
+                                    </select>
                                 </InputGroup>
                             </div>
                         </div>
 
-                        <div className="row justify-content-start">
+
+
+                        {/* <div className="row justify-content-start">
                             <div className="col-12">
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text >通行方向</InputGroup.Text>
@@ -63,12 +65,12 @@ export default function Example() {
 
                                     </select>
 
-                                    {/* <Button variant="primary" type="submit" className="col-1">
+                                    <Button variant="primary" type="submit" className="col-1">
                                         查詢
-                                    </Button> */}
+                                    </Button>
                                 </InputGroup>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="row justify-content-start">
                             <div className="row">
@@ -168,25 +170,47 @@ export default function Example() {
                 </Modal.Header>
                 <Modal.Body>
                     <InputGroup className="mb-3">
-                        <InputGroup.Text id="basic-addon1">車牌</InputGroup.Text>
-                        {/* <select className="form-select" aria-label="Default select example" defaultValue="0">
-                                        <option value="0">請選擇</option>
-                                        <option value="1">ABC-1234</option>
-                                        <option value="2">CGF-8754</option>
-                                        
-                                    </select> */}
+                        <InputGroup.Text id="basic-addon1"><ReqiuredFieldIcon/>車牌</InputGroup.Text>
+                        <select className="form-select" aria-label="Default select example" defaultValue="0">
+                            <option value="0">請選擇</option>
+                            <option value="1">ABC-1234</option>
+                            <option value="2">CGF-8754</option>
+
+                        </select>
                         <FormControl placeholder="範例: ABC-1234" />
-                        <InputGroup.Text id="basic-addon1">ETag號碼</InputGroup.Text>
-                        {/* <select className="form-select" aria-label="Default select example" defaultValue="0">
+                        {/* <InputGroup.Text id="basic-addon1">ETag號碼</InputGroup.Text>
+                        <select className="form-select" aria-label="Default select example" defaultValue="0">
                                         <option value="0">請選擇</option>
                                         <option value="1">ABC-1234</option>
                                         <option value="2">CGF-8754</option>
                                         
-                                    </select> */}
-                        <FormControl placeholder="範例: SX25847897" />
+                                    </select>
+                        <FormControl placeholder="範例: SX25847897" /> */}
                     </InputGroup>
 
                     <InputGroup className="mb-3">
+                        <InputGroup.Text >所屬縣市</InputGroup.Text>
+                        <select className="form-select" aria-label="Default select example" defaultValue="0">
+                            <option value="0">不指定</option>
+                            <option value="1">臺北市</option>
+                            <option value="2">新北市</option>
+                            <option value="2">高雄市</option>
+                        </select>
+
+                        {/* <InputGroup.Text >行經ETag Reader</InputGroup.Text>
+                        <select className="form-select" aria-label="Default select example" defaultValue="0">
+                            <option value="0">請選擇</option>
+                            <option value="1">01JHDS543</option>
+                            <option value="2">03KJSU430</option>
+
+                        </select> */}
+
+                        {/* <Button variant="primary" type="submit" className="col-1">
+                                        查詢
+                                    </Button> */}
+                    </InputGroup>
+
+                    {/* <InputGroup className="mb-3">
                         <InputGroup.Text >通行方向</InputGroup.Text>
                         <select className="form-select" aria-label="Default select example" defaultValue="0">
                             <option value="0">請選擇</option>
@@ -201,15 +225,15 @@ export default function Example() {
                             <option value="2">03KJSU430</option>
 
                         </select>
-                    </InputGroup>
+                    </InputGroup> */}
 
                     <InputGroup className="mb-3">
-                        <InputGroup.Text >有效日期</InputGroup.Text>
+                        <InputGroup.Text ><ReqiuredFieldIcon/>有效日期</InputGroup.Text>
                         <FormControl type="date" />
                     </InputGroup>
 
                     <InputGroup className="mb-3">
-                        <InputGroup.Text>新增推播對象</InputGroup.Text>
+                        <InputGroup.Text><ReqiuredFieldIcon/>新增推播對象</InputGroup.Text>
                         <FormControl placeholder="請輸入人事五碼" />
 
                         <Button variant="primary" type="button" >

@@ -8,9 +8,9 @@ const navFeatures = [{
     icon: <ListItemIcon/>,
     lists: [
         {
-            listTitle: "Home",
+            listTitle: "船隻入出港紀錄",
             icon: "icon",
-            path: "/Home"
+            path: "/MISABoatInOutHistory"
         },
         {
             listTitle: "About",
@@ -52,7 +52,7 @@ const navFeatures = [{
         {
             listTitle: "注偵設定",
             icon: "icon",
-            path: "/ETCNotice"
+            path: "/EtcNotice"
         }
     ]
 },

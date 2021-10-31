@@ -17,6 +17,7 @@ import ETagNotice from './page/ETagNotice/ETagNotice.jsx'
 import CarParkingHistory from './page/CarParkingHistory/CarParkingHistory.jsx'
 import CarParkingHistoryAPI from './page/CarParkingHistoryAPI/CarParkingHistoryAPI.jsx'
 import CarParkingNotice from './page/CarParkingNotice/CarParkingNotice.jsx'
+import MISABoatInOutHistory from './page/MISABoatInOutHistory/MISABoatInOutHistory.jsx'
 import {
     BrowserRouter as Router,
     Switch,
@@ -57,13 +58,16 @@ export default () => {
                         <Route path="/SuspectFilter" component={SuspectFilter} />
                         <Route path="/EtcHistory" component={EtcHistory} />
                         <Route path="/EtcHistoryAPI" component={EtcHistoryAPI} />                        
-                        <Route path="/ETCNotice" component={EtcNotice} />
+                        <Route path="/EtcNotice" component={EtcNotice} />
                         <Route path="/ETagHistory" component={ETagHistory} />
                         <Route path="/ETagHistoryAPI" component={ETagHistoryAPI} />
                         <Route path="/ETagNotice" component={ETagNotice} />
                         <Route path="/CarParkingHistory" component={CarParkingHistory} />
                         <Route path="/CarParkingHistoryAPI" component={CarParkingHistoryAPI} />
                         <Route path="/CarParkingNotice" component={CarParkingNotice} />
+                        <Route path="/MISABoatInOutHistory" component={MISABoatInOutHistory} />
+
+                        
                         
                     </Switch>
                 </div>

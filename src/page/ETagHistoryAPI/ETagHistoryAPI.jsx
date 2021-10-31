@@ -4,8 +4,8 @@ import { Form, Button, Dropdown, DropdownButton, Card, InputGroup, FormControl, 
 // import TextField from '@material-ui/core/TextField';
 import './Form_boat1.scss'
 // import { ThemeProvider, StylesProvider, jssPreset, makeStyles, createStyles } from '@material-ui/core/styles'
-import Form_BoatNotice_Table from './Form_BoatNotice_Table.jsx'
-import Form_BoatNotice_Table2 from './Form_BoatNotice_Table2.jsx'
+import Form_BoatNotice_Table from './ETagHistoryAPI_Table.jsx'
+import Form_BoatNotice_Table2 from './ETagHistoryAPI_Table2.jsx'
 
 
 export default function Example() {
@@ -20,42 +20,49 @@ export default function Example() {
             <div className="row justify-content-center col-12">
                 <Card >
                     {/* ======== card title ======= */}
-                    <div className="divCardTitle" >平面ETag行車紀錄(本案已查詢歷史紀錄)</div>
+                    <div className="divCardTitle" >平面ETag行車紀錄(拋查)</div>
                     <Card.Body className="col-12">
-                        <div className="row justify-content-start">
+                    <div className="row justify-content-start">
                             <div className="col-12">
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text id="basic-addon1">車牌</InputGroup.Text>
-                                    {/* <select className="form-select" aria-label="Default select example" defaultValue="0">
+                                    <select className="form-select" aria-label="Default select example" defaultValue="0">
                                         <option value="0">請選擇</option>
                                         <option value="1">ABC-1234</option>
                                         <option value="2">CGF-8754</option>
                                         
-                                    </select> */}
+                                    </select>
                                     <FormControl placeholder="範例: ABC-1234" />
-                                    <InputGroup.Text id="basic-addon1">ETag號碼</InputGroup.Text>
-                                    {/* <select className="form-select" aria-label="Default select example" defaultValue="0">
-                                        <option value="0">請選擇</option>
-                                        <option value="1">ABC-1234</option>
-                                        <option value="2">CGF-8754</option>
-                                        
+                                    {/* <InputGroup.Text id="basic-addon1">所屬縣市</InputGroup.Text>
+                                    <select className="form-select" aria-label="Default select example" defaultValue="0">
+                                        <option value="0">不指定</option>
+                                        <option value="1">臺北市</option>
+                                        <option value="2">新北市</option>
+                                        <option value="2">高雄市</option>
                                     </select> */}
-                                    <FormControl placeholder="範例: SX25847897" />
+                                    <InputGroup.Text >所屬縣市</InputGroup.Text>
+                                    <select className="form-select" aria-label="Default select example" defaultValue="0">
+                                        <option value="0">不指定</option>
+                                        <option value="1">臺北市</option>
+                                        <option value="2">新北市</option>
+                                        <option value="2">高雄市</option>
+                                    </select>
                                 </InputGroup>
                             </div>
                         </div>
 
-                        <div className="row justify-content-start">
+                        {/* <div className="row justify-content-start">
                             <div className="col-12">
                                 <InputGroup className="mb-3">
-                                    <InputGroup.Text >通行方向</InputGroup.Text>
+                                    <InputGroup.Text >所屬縣市</InputGroup.Text>
                                     <select className="form-select" aria-label="Default select example" defaultValue="0">
-                                        <option value="0">請選擇</option>
-                                        <option value="1">北上</option>
-                                        <option value="2">南下</option>
+                                        <option value="0">不指定</option>
+                                        <option value="1">臺北市</option>
+                                        <option value="2">新北市</option>
+                                        <option value="2">高雄市</option>
                                     </select>
 
-                                    <InputGroup.Text >指定門架</InputGroup.Text>
+                                    <InputGroup.Text >行經ETag Reader</InputGroup.Text>
                                     <select className="form-select" aria-label="Default select example" defaultValue="0">
                                         <option value="0">請選擇</option>
                                         <option value="1">01JHDS543</option>
@@ -63,18 +70,15 @@ export default function Example() {
 
                                     </select>
 
-                                    {/* <Button variant="primary" type="submit" className="col-1">
-                                        查詢
-                                    </Button> */}
                                 </InputGroup>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="row justify-content-start">
                             <div className="row">
                                 <div className="col-10">
                                     <InputGroup className="mb-3">
-                                        <InputGroup.Text >有效起迄日期</InputGroup.Text>
+                                        <InputGroup.Text >行經時間</InputGroup.Text>
 
                                         <FormControl type="date" />
 
@@ -90,7 +94,6 @@ export default function Example() {
                                 </div>
                             </div>
                         </div>
-
 
 
 

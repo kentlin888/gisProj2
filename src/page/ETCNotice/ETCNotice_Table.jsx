@@ -17,7 +17,7 @@ function Editable() {
     StationNameOut:"富基漁港", StationNameIn:"基隆漁港",passDirection:"北上" }
     const [columns, setColumns] = useState([
         { title: '車牌', field: 'CardId' },
-        { title: 'ETag號碼', field: 'ETagId'},
+        // { title: 'ETag號碼', field: 'ETagId'},
         { title: '通行方向', field: 'passDirection'},
         { title: '指定門架', field: 'DoorName'},
         // { title: '簽證出港時間', field: 'StationDateOut'},
