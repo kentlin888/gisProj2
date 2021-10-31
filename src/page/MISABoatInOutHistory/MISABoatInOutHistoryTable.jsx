@@ -4,30 +4,26 @@ import React, { Component, useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import { forwardRef } from 'react';
 import MaterialTable from 'material-table'
-// import NavBarHeader from './NavBarHeader.jsx'
-// import { makeStyles } from '@material-ui/styles';
+// import NavBarHeader from '../../NavBarHeader.jsx'
+import { makeStyles } from '@material-ui/styles';
 
 const headerStyle = { backgroundColor: 'black', color: 'white' };
+const TableCellStyle = { borderRight: '1px solid #FFFFFF' };
 
+// const columnData:[{id: '0',title: 'Name',field: 'name',hidden: false,cellStyle: TableCellStyle}]
 function Editable() {
     const { useState } = React;
     const [selectedRow, setSelectedRow] = useState(null);
 
-    let sampleData={CardId:"ABC-1234", ETagId:"SX25847897",DoorName:"汐止交流道5KM",  ExpiredDateTime:"2020/10/01 15:32:31",
-    StationNameOut:"富基漁港", StationNameIn:"基隆漁港",passDirection:"北上", CityName:"臺北市" }
+    let sampleData={UID:"CT S006650", BoatName:"王泰隆",StationNameOut:"永新漁港安檢所"
+        ,StationDateOut:"2020/10/01",StationNameIn:"永新漁港安檢所",StationDateIn:"2020/10/01" }
     const [columns, setColumns] = useState([
-        { title: '車牌', field: 'CardId' },
-        // { title: 'ETag號碼', field: 'ETagId'},
-        // { title: '通行方向', field: 'passDirection'},
-        // { title: '指定門架', field: 'DoorName'},
-        // { title: '簽證出港時間', field: 'StationDateOut'},
-        // { title: '進港安檢所', field: 'StationNamecIn'},
-        // { title: '簽證進港時間', field: 'StationDateIn'},
-        { title: '有效日期', field: 'ExpiredDateTime'},
-        { title: '所屬縣市', field: 'CityName'},
-    //     { title: '操作', field: 'doAction', render: rowData => <Button variant="danger" type="submit" className="col-auto">
-    //     取消注偵
-    // </Button> },
+        { title: '商船統一編號', field: 'UID' },
+        { title: '中文船名', field: 'BoatName'},
+        { title: '出港安檢所', field: 'StationNameOut'},
+        { title: '簽證出港時間', field: 'StationDateOut'},
+        { title: '進港安檢所', field: 'StationNameIn'},
+        { title: '簽證進港時間', field: 'StationDateIn'},        
     ]);
     const newDataSet = []
     for(let i=0;i<16;i++){
@@ -53,13 +49,12 @@ function Editable() {
             // }}
             options={{
                 headerStyle: {
-                    backgroundColor: 'black',
+                    backgroundColor: '#337ab7',
                     color: '#FFF'
                 },
                 search:true,
                 editable:false,
                 toolbar:false,
-                actionsColumnIndex: -1,
                 
             }}
             // editable={false}
@@ -79,38 +74,38 @@ function Editable() {
             //     }
             // ]}
 
-            editable={{
-                // onRowAdd: newData =>
-                //     new Promise((resolve, reject) => {
-                //         setTimeout(() => {
-                //             setData([...data, newData]);
+            // editable={{
+            //     onRowAdd: newData =>
+            //         new Promise((resolve, reject) => {
+            //             setTimeout(() => {
+            //                 setData([...data, newData]);
 
-                //             resolve();
-                //         }, 1000)
-                //     }),
-                onRowUpdate: (newData, oldData) =>
-                    new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            const dataUpdate = [...data];
-                            const index = oldData.tableData.id;
-                            dataUpdate[index] = newData;
-                            setData([...dataUpdate]);
+            //                 resolve();
+            //             }, 1000)
+            //         }),
+            //     onRowUpdate: (newData, oldData) =>
+            //         new Promise((resolve, reject) => {
+            //             setTimeout(() => {
+            //                 const dataUpdate = [...data];
+            //                 const index = oldData.tableData.id;
+            //                 dataUpdate[index] = newData;
+            //                 setData([...dataUpdate]);
 
-                            resolve();
-                        }, 1000)
-                    }),
-                onRowDelete: oldData =>
-                    new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            const dataDelete = [...data];
-                            const index = oldData.tableData.id;
-                            dataDelete.splice(index, 1);
-                            setData([...dataDelete]);
+            //                 resolve();
+            //             }, 1000)
+            //         }),
+            //     onRowDelete: oldData =>
+            //         new Promise((resolve, reject) => {
+            //             setTimeout(() => {
+            //                 const dataDelete = [...data];
+            //                 const index = oldData.tableData.id;
+            //                 dataDelete.splice(index, 1);
+            //                 setData([...dataDelete]);
 
-                            resolve()
-                        }, 1000)
-                    }),
-            }}
+            //                 resolve()
+            //             }, 1000)
+            //         }),
+            // }}
         />
     )
 }

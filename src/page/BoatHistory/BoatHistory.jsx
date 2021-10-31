@@ -36,15 +36,6 @@ export default () => {
                     <input type="date" />
                 </InputGroup> */}
 
-                    <InputGroup className="mb-3">
-                        <InputGroup.Text >有效起迄日期</InputGroup.Text>
-
-                        <FormControl type="date" />
-
-                        <InputGroup.Text >至</InputGroup.Text>
-                        <FormControl type="date" />
-
-                    </InputGroup>
 
 
                     <InputGroup className="mb-3">
@@ -62,10 +53,20 @@ export default () => {
                             <option value="2">富基漁港(15)</option>
 
                         </select>
+                    </InputGroup>
+
+                    <InputGroup className="mb-3">
+                        <InputGroup.Text >進出港時間</InputGroup.Text>
+
+                        <FormControl type="date" />
+
+                        <InputGroup.Text >至</InputGroup.Text>
+                        <FormControl type="date" />
 
                         <Button variant="primary" type="submit" className="col-1">
                             查詢
                         </Button>
+
                     </InputGroup>
 
                     {/* <div className="container">

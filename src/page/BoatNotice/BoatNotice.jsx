@@ -4,9 +4,9 @@ import { Form, Button, Dropdown, DropdownButton, Card, InputGroup, FormControl, 
 // import TextField from '@material-ui/core/TextField';
 import './Form_boat1.scss'
 // import { ThemeProvider, StylesProvider, jssPreset, makeStyles, createStyles } from '@material-ui/core/styles'
-import Form_BoatNotice_Table from './Form_BoatNotice_Table.jsx'
-import Form_BoatNotice_Table2 from './Form_BoatNotice_Table2.jsx'
-
+import Form_BoatNotice_Table from './BoatNotice_Table.jsx'
+import Form_BoatNotice_Table2 from './BoatNotice_Table2.jsx'
+import ReqiuredFieldIcon from '../../component/ReqiuredFieldIcon'
 
 export default function Example() {
     const [show, setShow] = useState(false);
@@ -160,7 +160,7 @@ export default function Example() {
                 </Modal.Header>
                 <Modal.Body>
                     <InputGroup className="mb-3">
-                        <InputGroup.Text id="basic-addon1">船隻編號</InputGroup.Text>
+                        <InputGroup.Text id="basic-addon1"><ReqiuredFieldIcon/>船隻編號</InputGroup.Text>
                         <select className="form-select" aria-label="Default select example" defaultValue="0">
                             <option value="0">請選擇</option>
                             {/* <option value="1">基隆漁港(1)</option>
@@ -186,12 +186,12 @@ export default function Example() {
                     </InputGroup>
 
                     <InputGroup className="mb-3">
-                        <InputGroup.Text >有效日期</InputGroup.Text>
+                        <InputGroup.Text ><ReqiuredFieldIcon/>有效日期</InputGroup.Text>
                         <FormControl type="date" />
                     </InputGroup>
 
                     <InputGroup className="mb-3">
-                        <InputGroup.Text>新增推播對象</InputGroup.Text>
+                        <InputGroup.Text><ReqiuredFieldIcon/>新增推播對象</InputGroup.Text>
                         <FormControl placeholder="請輸入人事五碼" />
 
                         <Button variant="primary" type="button" >

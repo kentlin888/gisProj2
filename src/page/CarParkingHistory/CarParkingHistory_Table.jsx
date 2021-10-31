@@ -14,17 +14,20 @@ function Editable() {
     const [selectedRow, setSelectedRow] = useState(null);
 
     let sampleData = {
-        CardId: "ABC-1234", ETagId: "SX25847897", DoorName: "汐止交流道5KM", PassDateTime: "2020/10/01 15:32:31",
-        StationNameOut: "富基漁港", StationNameIn: "基隆漁港"
+        CardId: "ABC-1234", ETagId: "SX25847897", ParkingLocation: "信義路三段153號", ParkingDateTime: "2020/10/01 15:32:31",
+        Longitude: "25.23153", Latitude:"120.253125",CityName:"臺北市"
     }
     const [columns, setColumns] = useState([
         { title: '車牌', field: 'CardId' },
-        { title: 'ETag號碼', field: 'ETagId' },
-        { title: '行經門架', field: 'DoorName' },
-        // { title: '簽證出港時間', field: 'StationDateOut'},
-        // { title: '進港安檢所', field: 'StationNamecIn'},
+        // { title: '停車日期', field: 'PassDateTime' },
+        { title: '停車時間', field: 'ParkingDateTime' },
+        // { title: 'ETag號碼', field: 'ETagId' },
+        { title: '停車位置', field: 'ParkingLocation' },
+        { title: '經度', field: 'Longitude'},
+        { title: '緯度', field: 'Latitude'},
+        { title: '所屬縣市', field: 'CityName'},
         // { title: '簽證進港時間', field: 'StationDateIn'},
-        { title: '行經時間', field: 'PassDateTime' },
+        // { title: '行經時間', field: 'PassDateTime' },
         //     { title: '操作', field: 'doAction', render: rowData => <Button variant="danger" type="submit" className="col-auto">
         //     取消注偵
         // </Button> },
