@@ -14,42 +14,43 @@ function Editable() {
     const [selectedRow, setSelectedRow] = useState(null);
 
     let sampleData = {
-        OwnerName:"王大明",
-        OwnerId:"S120556825",
-        CarOwnerAddress:"新北市金山區中正路52號",
-        CardNo:"HBJ-5236",
-        Label:"豐田",
-        FactoryYM:"101/09",
-        NumberCylinders:"4",
-        ExhaustVolume:"125cc",
-        EngineNumber:"FSD22548S",
-        LicenseStatus:"正常",
-        JurisdictionStation:"士林監理站",
-        TrafficViolations:7,
-        ViolationBusinessHours:25,
-        DateTheft:"102/05/26",
-        DateIssue:"101/03/26",
-        LicenseStatusChangeDay:"103/01/26",
-        RecentTransferDate:"103/01/26",
+        FisherName:"王大明",
+        FisherId:"S120556825",
+        Nationality:"菲律賓",
+        Position:"大副",
+        Capacity:"輪機一等長",
+        OrgId:"長興實業",
+        ShipId:"256345",
+        FVID:"CT 25648",
+        BoatName:"遠航一號",
+        EmploySDate:"101/05/22",
+        EmployEDate:"103/03/12",
+        FireDate:"",
+        SendBackDate:"",
+        TempStayFVID:"",
+        TempStayPlace:"",
+        DoubtfulType:"",
 
     }
     const [columns, setColumns] = useState([
-        { title: '車主姓名', field: 'OwnerName' },
-        { title: '車主證號', field: 'OwnerId' },
-        { title: '車主地址', field: 'CarOwnerAddress' },
-        { title: '車號', field: 'CardNo' },
-        { title: '廠牌', field: 'Label' },
-        { title: '出廠年月', field: 'FactoryYM' },
-        // { title: '汽缸數', field: 'NumberCylinders' },
-        { title: '排氣量', field: 'ExhaustVolume' },
-        { title: '引擎號碼', field: 'EngineNumber' },
-        // { title: '牌照狀態', field: 'LicenseStatus' },
-        { title: '目前管轄監理單位', field: 'JurisdictionStation' },
-        { title: '失竊日期', field: 'DateTheft' },
-        { title: '發照日期', field: 'DateIssue' },
-        { title: '牌照狀態異動日', field: 'LicenseStatusChangeDay' },
-        { title: '最近過戶日期', field: 'RecentTransferDate' },
-        
+        { title: '人員統一編號', field: 'FisherId' },
+        { title: '人員姓名', field: 'FisherName' },
+        { title: '國籍', field: 'Nationality' },
+        { title: '船員職務', field: 'Position' },
+        { title: '幹部職級', field: 'Capacity' },
+
+        { title: '機關單位代碼', field: 'OrgId' },
+        { title: '船舶資料主鍵', field: 'ShipId' },
+        { title: '漁船統一編號', field: 'FVID' },
+        { title: '中文船名', field: 'BoatName' },
+
+        { title: '僱用期間起日', field: 'EmploySDate' },
+        { title: '僱用期間迄日', field: 'EmployEDate' },
+        { title: '解雇日期', field: 'FireDate' },
+        { title: '送返日期', field: 'SendBackDate' },
+        { title: '暫置漁船統一編號', field: 'TempStayFVID' },
+        { title: '暫置位置', field: 'TempStayPlace' },
+        { title: '是否可疑', field: 'DoubtfulType' },
 
     ]);
     const newDataSet = []
@@ -77,12 +78,8 @@ function Editable() {
             options={{
                 headerStyle: {
                     backgroundColor: '#337ab7',
-                    color: '#FFF',
-                    // minWidth:'200px',
+                    color: '#FFF'
                 },
-                // cellStyle:{
-                //     minWidth:'200px',
-                // },
                 search: true,
                 editable: false,
                 toolbar: false,

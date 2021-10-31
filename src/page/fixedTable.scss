@@ -7,9 +7,22 @@
 .fixedTable td {
     text-align: center;
     border: 1px solid white;
-    
     // background-color: #457b9d;
 }
+
+.fixedTable tr {
+    text-align: center;
+    border: 1px solid white;
+    // background-color: #457b9d;
+    height: 40px;
+}
+
+// .fixedTable td div {
+//     height: 40px;
+    
+    
+//     background-color: #457b9d;
+// }
 // .fixedTable thead tr{
 //     text-align: center;
 //     background-color: "#457b9d";
@@ -21,6 +34,7 @@
     // text-align: center;
     background-color: #337ab7;
     color: white;
+
 }
 
 

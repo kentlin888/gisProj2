@@ -25,12 +25,7 @@ function Editable() {
         EngineNumber:"FSD22548S",
         LicenseStatus:"正常",
         JurisdictionStation:"士林監理站",
-        TrafficViolations:7,
-        ViolationBusinessHours:25,
-        DateTheft:"102/05/26",
-        DateIssue:"101/03/26",
-        LicenseStatusChangeDay:"103/01/26",
-        RecentTransferDate:"103/01/26",
+        
 
     }
     const [columns, setColumns] = useState([
@@ -40,16 +35,11 @@ function Editable() {
         { title: '車號', field: 'CardNo' },
         { title: '廠牌', field: 'Label' },
         { title: '出廠年月', field: 'FactoryYM' },
-        // { title: '汽缸數', field: 'NumberCylinders' },
+        { title: '汽缸數', field: 'NumberCylinders' },
         { title: '排氣量', field: 'ExhaustVolume' },
         { title: '引擎號碼', field: 'EngineNumber' },
-        // { title: '牌照狀態', field: 'LicenseStatus' },
-        { title: '目前管轄監理單位', field: 'JurisdictionStation' },
-        { title: '失竊日期', field: 'DateTheft' },
-        { title: '發照日期', field: 'DateIssue' },
-        { title: '牌照狀態異動日', field: 'LicenseStatusChangeDay' },
-        { title: '最近過戶日期', field: 'RecentTransferDate' },
-        
+        { title: '牌照狀態', field: 'LicenseStatus' },
+        { title: '管轄所站', field: 'JurisdictionStation' },
 
     ]);
     const newDataSet = []
@@ -77,12 +67,8 @@ function Editable() {
             options={{
                 headerStyle: {
                     backgroundColor: '#337ab7',
-                    color: '#FFF',
-                    // minWidth:'200px',
+                    color: '#FFF'
                 },
-                // cellStyle:{
-                //     minWidth:'200px',
-                // },
                 search: true,
                 editable: false,
                 toolbar: false,

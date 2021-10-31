@@ -11,9 +11,9 @@ import Print from '@material-ui/icons/Print';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Checkbox from '@material-ui/core/Checkbox';
 
-import MISACarChangeTable from "./MISACarChangeTable.jsx";
+import MISABoatInfoTable from "./MISABoatInfoTable.jsx";
 
-const pageTitle = "車籍變更紀錄"
+const pageTitle = "漁船基本資料"
 const spanIcon = {
     display: "inline-block", background: "#337ab7", color: "white", padding: ".8rem", borderRadius: "5px", margin: "auto 5px", height: "4rem"
 }
@@ -83,8 +83,19 @@ export default function CustomizedAccordions() {
                         <span style={spanIcon} ><Print style={iconStyle} /><span>列印</span></span>
                         <span style={spanIcon} ><GetAppIcon style={iconStyle} /><span>匯出資料</span></span>
                     </div>
-                    <div><MISACarChangeTable /></div>
+                    
 
+                    {/* <div>
+                        <span style={spanIcon} >
+                            <Print style={iconStyle} />列印XXXXX
+                            <span style={{ color: "blue" }}>列印XXXXX</span>
+                        </span>
+                    </div> */}
+                    {/* <div style={{ display: "flex" }}>
+                        <span ><Print style={iconStyle} />列印</span>
+                        <span ><GetAppIcon style={iconStyle} />匯出資料</span>
+                    </div> */}
+                    <div><MISABoatInfoTable /></div>
 
                 </AccordionDetails>
             </Accordion>

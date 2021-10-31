@@ -1,74 +1,176 @@
-import React from 'react'
-import '../fixedTable.scss'
-export default function MISACarInfoTable() {
+import React, { Component, useState } from 'react'
+// import Button from 'react-bootstrap/Button';
+// import Modal from 'react-bootstrap/Modal';
+import { Button, Modal } from 'react-bootstrap'
+import { forwardRef } from 'react';
+import MaterialTable from 'material-table'
+// import NavBarHeader from './NavBarHeader.jsx'
+// import { makeStyles } from '@material-ui/styles';
+
+const headerStyle = { backgroundColor: "red", color: 'white' };
+
+function Editable() {
+    const { useState } = React;
+    const [selectedRow, setSelectedRow] = useState(null);
+
+    let sampleData = {
+        OwnerName:"王大明",
+        OwnerId:"S120556825",
+        CarOwnerAddress:"新北市金山區中正路52號",
+        CardNo:"HBJ-5236",
+        Label:"豐田",
+        FactoryYM:"101/09",
+        NumberCylinders:"4",
+        ExhaustVolume:"125cc",
+        EngineNumber:"FSD22548S",
+        LicenseStatus:"正常",
+        JurisdictionStation:"士林監理站",
+        TrafficViolations:7,
+        ViolationBusinessHours:25,
+        
+
+    }
+    const [columns, setColumns] = useState([
+        { title: '車主姓名', field: 'OwnerName' },
+        { title: '車主證號', field: 'OwnerId' },
+        { title: '車主地址', field: 'CarOwnerAddress' },
+        { title: '車號', field: 'CardNo' },
+        { title: '廠牌', field: 'Label' },
+        { title: '出廠年月', field: 'FactoryYM' },
+        // { title: '汽缸數', field: 'NumberCylinders' },
+        { title: '排氣量', field: 'ExhaustVolume' },
+        { title: '引擎號碼', field: 'EngineNumber' },
+        // { title: '牌照狀態', field: 'LicenseStatus' },
+        { title: '目前管轄監理單位', field: 'JurisdictionStation' },
+        { title: '交通違規未結次數', field: 'TrafficViolations' },
+        { title: '違規營業次數', field: 'ViolationBusinessHours' },
+
+    ]);
+    const newDataSet = []
+    for (let i = 0; i < 16; i++) {
+        let newData = { ...sampleData };
+        newDataSet.push(newData)
+    }
+    const [data, setData] = useState(newDataSet);
+
     return (
-        <div>
-            <table className="fixedTable" style={{ width: "100%" }}>
-                
-                <thead>
-                    <tr>
-                        <td>姓名</td>
-                        <td>生日</td>
-                        <td>汽(機)駕戶籍地址</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>王小明</td>
-                        <td>69/02/25</td>
-                        <td>臺北市北投區中正路12號</td>
-                    </tr>
-                </tbody>
+        <MaterialTable
+            title="Editable Preview"
+            title={null}
 
-                <thead>
-                    <tr>
-                        <td>汽(機)駕戶籍區號</td>
-                        <td>汽(機)有效日</td>
-                        <td>汽(機)車駕照狀態</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>251</td>
-                        <td>69/02/25</td>
-                        <td>吊銷</td>
-                    </tr>
-                </tbody>
+            columns={columns}
+            data={data}
+            onRowClick={((evt, selectedRow) => setSelectedRow(selectedRow.tableData.id))}
+            // options={{
+            //     headerStyle: { headerStyle },
 
-                <thead>
-                    <tr>
-                        <td>汽(機)駕照類</td>
-                        <td>汽(機)所屬站名稱</td>
-                        <td>汽(機)管轄編號</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>汽車</td>
-                        <td>士林監理所</td>
-                        <td>FG255135</td>
-                    </tr>
-                </tbody>
+            //     rowStyle: rowData => ({
+            //         backgroundColor: (selectedRow === rowData.tableData.id) ? '#EEE' : '#FFF'
+            //     })
+            // }}
+            options={{
+                headerStyle: {
+                    backgroundColor: '#337ab7',
+                    color: '#FFF'
+                },
+                search: true,
+                editable: false,
+                toolbar: false,
+                actionsColumnIndex: -1,
 
-                <thead>
-                    <tr>
-                        <td>駕照吊扣吊註銷起日</td>
-                        <td>駕照吊扣吊註銷迄日</td>
-                        <td>汽(機)持照限制</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>身心障礙</td>
-                    </tr>
-                </tbody>
+            }}
+            // editable={false}
+            // actions={false}
 
+            //headerStyle={headerStyle}
+            // actions={[
+            //     {
+            //         icon: "save",
+            //         iconProps: { style: { fontSize: "14px", color: "green" } },
+            //         tooltip: "Save User",
+            //         onClick: (event, rowData) => alert("You saved " + rowData.name)
+            //     },
+            //     {
+            //         icon:"edit",
+            //         hidden:true
+            //     }
+            // ]}
 
+            editable={{
+                // onRowAdd: newData =>
+                //     new Promise((resolve, reject) => {
+                //         setTimeout(() => {
+                //             setData([...data, newData]);
 
-            </table>
+                //             resolve();
+                //         }, 1000)
+                //     }),
+                // onRowUpdate: (newData, oldData) =>
+                //     new Promise((resolve, reject) => {
+                //         setTimeout(() => {
+                //             const dataUpdate = [...data];
+                //             const index = oldData.tableData.id;
+                //             dataUpdate[index] = newData;
+                //             setData([...dataUpdate]);
 
-        </div>
+                //             resolve();
+                //         }, 1000)
+                //     }),
+                // onRowDelete: oldData =>
+                //     new Promise((resolve, reject) => {
+                //         setTimeout(() => {
+                //             const dataDelete = [...data];
+                //             const index = oldData.tableData.id;
+                //             dataDelete.splice(index, 1);
+                //             setData([...dataDelete]);
+
+                //             resolve()
+                //         }, 1000)
+                //     }),
+            }}
+        />
     )
+}
+
+
+
+function DemoModal() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    return (
+        <React.Fragment>
+            <Button variant="primary" onClick={handleShow}>
+                Launch demo modal
+            </Button>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Save Changes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </React.Fragment>
+    );
+}
+
+export default class Table1 extends Component {
+    render() {
+        return (
+            <div>
+                {/* <DemoModal></DemoModal> */}
+                <Editable />
+            </div>
+        )
+    }
 }

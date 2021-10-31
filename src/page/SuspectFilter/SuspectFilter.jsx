@@ -29,7 +29,11 @@ export default function ToggleButtonExample() {
                             <div className="col-3">
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text >性別</InputGroup.Text>
-                                    <ButtonGroup>
+                                    <select className="form-select" aria-label="Default select example" defaultValue="0">
+                                        <option value="0">男</option>
+                                        <option value="1">女</option>
+                                    </select>
+                                    {/* <ButtonGroup>
                                         {radios.map((radio, idx) => (
                                             <ToggleButton
                                                 key={idx}
@@ -44,7 +48,7 @@ export default function ToggleButtonExample() {
                                                 {radio.name}
                                             </ToggleButton>
                                         ))}
-                                    </ButtonGroup>
+                                    </ButtonGroup> */}
                                 </InputGroup>
                             </div>
 

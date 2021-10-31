@@ -13,19 +13,44 @@ const navFeatures = [{
             path: "/MISABoatInOutHistory"
         },
         {
-            listTitle: "MISA-車籍資料",
+            listTitle: "MISA車號-車籍資料",
             icon: "icon",
             path: "/MISACarInfo"
         },
         {
-            listTitle: "MISA-車籍變更",
+            listTitle: "MISA車號-車籍變更紀錄",
             icon: "icon",
             path: "/MISACarChange"
         },
         {
-            listTitle: "MISA-違規紀錄",
+            listTitle: "MISA車號-違規紀錄",
             icon: "icon",
             path: "/MISACarViolation"
+        },
+        {
+            listTitle: "MISA個人-名下車輛紀錄",
+            icon: "icon",
+            path: "/MISAPersonCarsInfo"
+        },
+        {
+            listTitle: "MISA漁船-基本資料",
+            icon: "icon",
+            path: "/MISABoatInfo"
+        },
+        {
+            listTitle: "MISA漁船-相關船員",
+            icon: "icon",
+            path: "/MISABoatCrewsInfo"
+        },
+        {
+            listTitle: "MISA個人-相關船員",
+            icon: "icon",
+            path: "/MISABoatCaptonCrewsInfo"
+        },
+        {
+            listTitle: "MISA漁船-違規紀錄",
+            icon: "icon",
+            path: "/MISABoatViolation"
         },
         {
             listTitle: "About",
@@ -37,6 +62,10 @@ const navFeatures = [{
             icon: "icon",
             path: "/"
         }
+
+
+
+        
     ]
 },
 {

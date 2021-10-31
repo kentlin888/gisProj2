@@ -11,9 +11,12 @@ import Print from '@material-ui/icons/Print';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Checkbox from '@material-ui/core/Checkbox';
 
-import MISACarViolation from "./MISACarViolationTable.jsx";
+import MISACarViolationTable from "./MISACarViolationTable.jsx";
 
-const pageTitle = "違規紀錄"
+const pageTitle = "車輛違規紀錄"
+const spanIcon = {
+    display: "inline-block", background: "#337ab7", color: "white", padding: ".8rem", borderRadius: "5px", margin: "auto 5px", height: "4rem"
+}
 const Accordion = withStyles({
     root: {
         border: '1px solid rgba(0, 0, 0, .125)',
@@ -55,7 +58,7 @@ const AccordionDetails = withStyles((theme) => ({
     },
 }))(MuiAccordionDetails);
 const iconStyle = {
-    display: "block", background: "#457b9d", color: "white", padding: "5px", fontSize: "3rem", borderRadius: "5px", margin: "auto 5px"
+    background: "#337ab7", color: "white", padding: "5px", fontSize: "3rem", borderRadius: "5px", margin: "auto 5px"
 }
 export default function CustomizedAccordions() {
     const [expanded, setExpanded] = React.useState('panel1');
@@ -70,17 +73,18 @@ export default function CustomizedAccordions() {
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
                     <div style={{ border: "black 2px solid", borderRadius: "5px", margin: ".5rem", width: "85%" }}>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1d-content" id="panel1d-header">
-                            <Checkbox checked color="primary"/><div style={{display:"flex", alignItems:"center"}}>{`${pageTitle} (查詢結果)`}</div>
+                            <Checkbox checked color="primary" /><div style={{ display: "flex", alignItems: "center" }}>{`${pageTitle} (查詢結果)`}</div>
                         </AccordionSummary></div>
                     <AutorenewIcon style={iconStyle} />
                     <DeleteIcon style={iconStyle} />
                 </div>
                 <AccordionDetails style={{ display: "flex", flexDirection: "column", }}>
-                    <div style={{ display: "flex" }}>
-                        <span ><Print style={iconStyle} />列印</span>
-                        <span ><GetAppIcon style={iconStyle} />匯出資料</span>
+                    <div style={{ marginBottom: "20px" }}>
+                        <span style={spanIcon} ><Print style={iconStyle} /><span>列印</span></span>
+                        <span style={spanIcon} ><GetAppIcon style={iconStyle} /><span>匯出資料</span></span>
                     </div>
-                    <div><MISACarViolation /></div>
+                    <div><MISACarViolationTable /></div>
+
 
                 </AccordionDetails>
             </Accordion>

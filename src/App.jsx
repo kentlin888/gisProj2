@@ -21,6 +21,11 @@ import MISABoatInOutHistory from './page/MISABoatInOutHistory/MISABoatInOutHisto
 import MISACarInfo from './page/MISACarInfo'
 import MISACarChange from './page/MISACarChange'
 import MISACarViolation from './page/MISACarViolation'
+import MISAPersonCarsInfo from './page/MISAPersonCarsInfo'
+import MISABoatInfo from './page/MISABoatInfo'
+import MISABoatCrewsInfo from './page/MISABoatCrewsInfo'
+// import MISABoatCaptonCrewsInfo from './page/MISABoatCaptonCrewsInfo'
+// import MISABoatViolation from './page/MISABoatViolation'
 
 import {
     BrowserRouter as Router,
@@ -73,7 +78,12 @@ export default () => {
                         <Route path="/MISACarInfo" component={MISACarInfo} />
                         <Route path="/MISACarChange" component={MISACarChange} />
                         <Route path="/MISACarViolation" component={MISACarViolation} />
+                        <Route path="/MISAPersonCarsInfo" component={MISAPersonCarsInfo} />
 
+                        <Route path="/MISABoatInfo" component={MISABoatInfo} />
+                        <Route path="/MISABoatCrewsInfo" component={MISABoatCrewsInfo} />
+                        {/* <Route path="/MISABoatCaptonCrewsInfo" component={MISABoatCaptonCrewsInfo} />
+                        <Route path="/MISABoatViolation" component={MISABoatViolation} /> */}
                         
                     </Switch>
                 </div>
