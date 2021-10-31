@@ -4,6 +4,7 @@ import navFeatures from './navFeatures.js';
 import ListIcon from '@mui/icons-material/List';
 import { container } from "./styles/indexStyles.js";
 import IndexPage from "./page/IndexPage.jsx";
+import About from './About.jsx';
 import BoatHistory from './page/BoatHistory/BoatHistory.jsx'
 import BoatNotice from './page/BoatNotice/BoatNotice.jsx'
 import SuspectFilter from './page/SuspectFilter/SuspectFilter.jsx'
@@ -27,9 +28,9 @@ function Home(){
     return <div>Home2222</div>
 }
 
-function About(){
-    return <div>About</div>
-}
+// function About(){
+//     return <div>About</div>
+// }
 
 
 export default () => {
