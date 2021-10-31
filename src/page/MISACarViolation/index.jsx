@@ -11,9 +11,9 @@ import Print from '@material-ui/icons/Print';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Checkbox from '@material-ui/core/Checkbox';
 
-import MISABoatInOutHistoryTable from "./MISABoatInOutHistoryTable.jsx";
+import MISACarViolation from "./MISACarViolationTable.jsx";
 
-const pageTitle = "船隻入出港紀錄"
+const pageTitle = "違規紀錄"
 const Accordion = withStyles({
     root: {
         border: '1px solid rgba(0, 0, 0, .125)',
@@ -80,7 +80,7 @@ export default function CustomizedAccordions() {
                         <span ><Print style={iconStyle} />列印</span>
                         <span ><GetAppIcon style={iconStyle} />匯出資料</span>
                     </div>
-                    <div><MISABoatInOutHistoryTable /></div>
+                    <div><MISACarViolation /></div>
 
                 </AccordionDetails>
             </Accordion>

@@ -18,6 +18,10 @@ import CarParkingHistory from './page/CarParkingHistory/CarParkingHistory.jsx'
 import CarParkingHistoryAPI from './page/CarParkingHistoryAPI/CarParkingHistoryAPI.jsx'
 import CarParkingNotice from './page/CarParkingNotice/CarParkingNotice.jsx'
 import MISABoatInOutHistory from './page/MISABoatInOutHistory/MISABoatInOutHistory.jsx'
+import MISACarInfo from './page/MISACarInfo'
+import MISACarChange from './page/MISACarChange'
+import MISACarViolation from './page/MISACarViolation'
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -66,8 +70,10 @@ export default () => {
                         <Route path="/CarParkingHistoryAPI" component={CarParkingHistoryAPI} />
                         <Route path="/CarParkingNotice" component={CarParkingNotice} />
                         <Route path="/MISABoatInOutHistory" component={MISABoatInOutHistory} />
+                        <Route path="/MISACarInfo" component={MISACarInfo} />
+                        <Route path="/MISACarChange" component={MISACarChange} />
+                        <Route path="/MISACarViolation" component={MISACarViolation} />
 
-                        
                         
                     </Switch>
                 </div>

@@ -8,9 +8,24 @@ const navFeatures = [{
     icon: <ListItemIcon/>,
     lists: [
         {
-            listTitle: "船隻入出港紀錄",
+            listTitle: "MISA-船隻入出港紀錄",
             icon: "icon",
             path: "/MISABoatInOutHistory"
+        },
+        {
+            listTitle: "MISA-車籍資料",
+            icon: "icon",
+            path: "/MISACarInfo"
+        },
+        {
+            listTitle: "MISA-車籍變更",
+            icon: "icon",
+            path: "/MISACarChange"
+        },
+        {
+            listTitle: "MISA-違規紀錄",
+            icon: "icon",
+            path: "/MISACarViolation"
         },
         {
             listTitle: "About",

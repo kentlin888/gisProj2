@@ -16,14 +16,20 @@ function Editable() {
     const [selectedRow, setSelectedRow] = useState(null);
 
     let sampleData={UID:"CT S006650", BoatName:"王泰隆",StationNameOut:"永新漁港安檢所"
-        ,StationDateOut:"2020/10/01",StationNameIn:"永新漁港安檢所",StationDateIn:"2020/10/01" }
+        ,StationDateOut:"2020/10/01",StationNameIn:"永新漁港安檢所",StationDateIn:"2020/10/01" 
+        ,BoatCallId:"S782", SailSerialNo:5, CrewCount:"12"
+    
+    }
     const [columns, setColumns] = useState([
-        { title: '商船統一編號', field: 'UID' },
+        { title: '漁船統一編號', field: 'UID' },
         { title: '中文船名', field: 'BoatName'},
+        { title: '船舶呼號', field: 'BoatCallId'},
+        { title: '航次', field: 'SailSerialNo'},
         { title: '出港安檢所', field: 'StationNameOut'},
         { title: '簽證出港時間', field: 'StationDateOut'},
         { title: '進港安檢所', field: 'StationNameIn'},
         { title: '簽證進港時間', field: 'StationDateIn'},        
+        { title: '人員數量', field: 'CrewCount'},
     ]);
     const newDataSet = []
     for(let i=0;i<16;i++){
@@ -50,7 +56,8 @@ function Editable() {
             options={{
                 headerStyle: {
                     backgroundColor: '#337ab7',
-                    color: '#FFF'
+                    color: '#FFF',
+                    border: '1px solid white'
                 },
                 search:true,
                 editable:false,

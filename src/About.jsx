@@ -7,7 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import DeleteIcon from '@material-ui/icons/Delete';
-import {Print} from '@material-ui/icons';
+import Print from '@material-ui/icons/Print';
+import GetAppIcon from '@material-ui/icons/GetApp';
+
 import ExampleTable from "./component/table/ExampleTable.jsx";
 const Accordion = withStyles({
     root: {
@@ -50,7 +52,7 @@ const AccordionDetails = withStyles((theme) => ({
     },
 }))(MuiAccordionDetails);
 const iconStyle = {
-    display: "block", background: "#457b9d", color: "white", padding: "5px", fontSize: "3rem", borderRadius: "5px", margin: "auto 5px" 
+    display: "block", background: "#457b9d", color: "white", padding: "5px", fontSize: "3rem", borderRadius: "5px", margin: "auto 5px"
 }
 export default function CustomizedAccordions() {
     const [expanded, setExpanded] = React.useState('panel1');
@@ -69,10 +71,13 @@ export default function CustomizedAccordions() {
                     <AutorenewIcon style={iconStyle} />
                     <DeleteIcon style={iconStyle} />
                 </div>
-                <AccordionDetails style={{display:"flex", flexDirection:"column",}}>
-                    <div ><Print style={iconStyle} /></div>
+                <AccordionDetails style={{ display: "flex", flexDirection: "column", }}>
+                    <div style={{ display: "flex" }}>
+                        <span ><Print style={iconStyle} />列印</span>
+                        <span ><GetAppIcon style={iconStyle} />匯出資料</span>
+                    </div>
                     <div><ExampleTable /></div>
-                    
+
                 </AccordionDetails>
             </Accordion>
 
