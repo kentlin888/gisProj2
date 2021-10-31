@@ -50,7 +50,10 @@ const AccordionDetails = withStyles((theme) => ({
     },
 }))(MuiAccordionDetails);
 const iconStyle = {
-    display: "block", background: "#457b9d", color: "white", padding: "5px", fontSize: "3rem", borderRadius: "5px", margin: "auto 5px" 
+    background: "#457b9d", color: "white", padding: "5px", fontSize: "3rem", borderRadius: "5px", margin: "auto 5px" 
+}
+const spanIcon = {
+   border:"red 2px solid",display:"inline-block", background: "#457b9d", color: "white", padding: ".8rem", borderRadius: "5px", margin: "auto 5px",height:"4rem"
 }
 export default function CustomizedAccordions() {
     const [expanded, setExpanded] = React.useState('panel1');
@@ -66,11 +69,11 @@ export default function CustomizedAccordions() {
                     <div style={{ border: "black 2px solid", borderRadius: "5px", margin: ".5rem", width: "85%" }}>
                         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1d-content" id="panel1d-header">Collapsible Group Item #1
                         </AccordionSummary></div>
-                    <AutorenewIcon style={iconStyle} />
-                    <DeleteIcon style={iconStyle} />
+                    <div><AutorenewIcon style={iconStyle} /></div>
+                    <div><DeleteIcon style={iconStyle} /></div>
                 </div>
                 <AccordionDetails style={{display:"flex", flexDirection:"column",}}>
-                    <div ><Print style={iconStyle} /></div>
+                <div><span style={spanIcon} ><Print style={iconStyle} /><span>Text</span></span></div>
                     <div><ExampleTable /></div>
                     
                 </AccordionDetails>
