@@ -203,7 +203,7 @@ export default function Example() {
                     </InputGroup>
 
                     <InputGroup className="mb-3">
-                        <InputGroup.Text><ReqiuredFieldIcon/>新增推播對象</InputGroup.Text>
+                        <InputGroup.Text>新增推播對象</InputGroup.Text>
                         <FormControl placeholder="請輸入人事五碼" />
 
                         <Button variant="primary" type="button" >

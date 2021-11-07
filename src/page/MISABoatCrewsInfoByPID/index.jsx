@@ -14,28 +14,36 @@ import Checkbox from '@material-ui/core/Checkbox';
 // import MISACarInfoTable from "./MISACarInfoTable.jsx";
 import EasyTable from '../../component/EasyTable/EasyTable.jsx'
 
-const pageTitle = "車籍基本資料"
+const pageTitle = "船員基本資料"
 // let sampleData = {
 //     UID: "CT S006650", BoatName: "王泰隆", StationNameOut: "永新漁港安檢所"
 //     , StationDateOut: "2020/10/01", StationNameIn: "永新漁港安檢所", StationDateIn: "2020/10/01",
 //     StationDateIn2: "2020/10/01"
 // }
 let defaultColumns = [
-    { title: '車主姓名', value:"王小明"},
-    { title: '車主生日', value:"75/11/21"},
-    { title: '車主證號', value:"S120589521"},
-    { title: '車主地址',  value:"新竹市光復路22號"},
+    
+    
+    { title: '身分證明文件種類', value:"身分證"},
+    { title: '身分證明文件字號', value:"A120589521"},
+    { title: '中文姓名', value:"王大明"},
+    { title: '英文姓名', value:"Bob Wang"},
+    { title: '生日', value:"71/03/04"},
+    { title: '出生地', value:"台灣花蓮"},
+    { title: '照片', value:""},
+    { title: '性別', value:"男"},
+    { title: '電話1', value:"0952365421"},
+    { title: '電話2', value:""},
+    { title: '電話3', value:""},
+    { title: '地址', value:"花蓮市中正路52號"},
 
-    { title: '車牌號碼', value:"GFB-5521"},    
-    { title: '廠牌名稱',  value:"豐田"},
-    { title: '出廠年月',  value:"101/03"},
-    { title: '顏色',  value:"白"},
-    { title: '車種',  value:"自用小客車"},
-    { title: '總排氣量(馬力)',  value:"1399cc"},
+    { title: '漁船統一編號', value:"CT 25341"},//FVID
+    { title: '國籍', value:"菲律賓"},
+    { title: '船員職務', value:"輪機"},
+    { title: '幹部職級', value:"大副"},
+    { title: '僱用期間起日', value:"101/05/01"},
+    { title: '僱用期間迄日', value:"103/05/01"},
+    { title: '目前進出序號', value:"52121"},
 ]
-
-
-
 
 
 const spanIcon = {

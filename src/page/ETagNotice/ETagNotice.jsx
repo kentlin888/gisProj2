@@ -34,13 +34,13 @@ export default function Example() {
 
                                     </select>
                                     <FormControl placeholder="範例: ABC-1234" />
-                                    <InputGroup.Text >所屬縣市</InputGroup.Text>
+                                    {/* <InputGroup.Text >所屬縣市</InputGroup.Text>
                                     <select className="form-select" aria-label="Default select example" defaultValue="0">
                                         <option value="0">不指定</option>
                                         <option value="1">臺北市</option>
                                         <option value="2">新北市</option>
                                         <option value="2">高雄市</option>
-                                    </select>
+                                    </select> */}
                                 </InputGroup>
                             </div>
                         </div>
@@ -189,13 +189,13 @@ export default function Example() {
                     </InputGroup>
 
                     <InputGroup className="mb-3">
-                        <InputGroup.Text >所屬縣市</InputGroup.Text>
+                        {/* <InputGroup.Text >所屬縣市</InputGroup.Text>
                         <select className="form-select" aria-label="Default select example" defaultValue="0">
                             <option value="0">不指定</option>
                             <option value="1">臺北市</option>
                             <option value="2">新北市</option>
                             <option value="2">高雄市</option>
-                        </select>
+                        </select> */}
 
                         {/* <InputGroup.Text >行經ETag Reader</InputGroup.Text>
                         <select className="form-select" aria-label="Default select example" defaultValue="0">
@@ -233,7 +233,7 @@ export default function Example() {
                     </InputGroup>
 
                     <InputGroup className="mb-3">
-                        <InputGroup.Text><ReqiuredFieldIcon/>新增推播對象</InputGroup.Text>
+                        <InputGroup.Text>新增推播對象</InputGroup.Text>
                         <FormControl placeholder="請輸入人事五碼" />
 
                         <Button variant="primary" type="button" >

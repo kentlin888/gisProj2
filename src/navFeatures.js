@@ -43,9 +43,9 @@ const navFeatures = [{
             path: "/MISABoatCrewsInfo"
         },
         {
-            listTitle: "MISA個人-相關船員",
+            listTitle: "MISA個人-船員基本資料",
             icon: "icon",
-            path: "/MISABoatCaptonCrewsInfo"
+            path: "/MISABoatCrewsInfoByPID"
         },
         {
             listTitle: "MISA漁船-違規紀錄",

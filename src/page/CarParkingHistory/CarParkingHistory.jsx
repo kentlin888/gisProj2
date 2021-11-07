@@ -75,7 +75,7 @@ export default function Example() {
                             <div className="row">
                                 <div className="col-10">
                                     <InputGroup className="mb-3">
-                                        <InputGroup.Text >停車時間</InputGroup.Text>
+                                        <InputGroup.Text >停車日期</InputGroup.Text>
 
                                         <FormControl type="date" />
 

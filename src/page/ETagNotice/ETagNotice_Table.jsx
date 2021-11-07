@@ -25,7 +25,7 @@ function Editable() {
         // { title: '進港安檢所', field: 'StationNamecIn'},
         // { title: '簽證進港時間', field: 'StationDateIn'},
         { title: '有效日期', field: 'ExpiredDate' },
-        { title: '所屬縣市', field: 'CityName' },
+        // { title: '所屬縣市', field: 'CityName' },
         //     { title: '操作', field: 'doAction', render: rowData => <Button variant="danger" type="submit" className="col-auto">
         //     取消注偵
         // </Button> },

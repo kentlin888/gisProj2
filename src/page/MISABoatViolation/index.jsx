@@ -14,28 +14,25 @@ import Checkbox from '@material-ui/core/Checkbox';
 // import MISACarInfoTable from "./MISACarInfoTable.jsx";
 import EasyTable from '../../component/EasyTable/EasyTable.jsx'
 
-const pageTitle = "車籍基本資料"
+const pageTitle = "漁船違規紀錄"
 // let sampleData = {
 //     UID: "CT S006650", BoatName: "王泰隆", StationNameOut: "永新漁港安檢所"
 //     , StationDateOut: "2020/10/01", StationNameIn: "永新漁港安檢所", StationDateIn: "2020/10/01",
 //     StationDateIn2: "2020/10/01"
 // }
 let defaultColumns = [
-    { title: '車主姓名', value:"王小明"},
-    { title: '車主生日', value:"75/11/21"},
-    { title: '車主證號', value:"S120589521"},
-    { title: '車主地址',  value:"新竹市光復路22號"},
-
-    { title: '車牌號碼', value:"GFB-5521"},    
-    { title: '廠牌名稱',  value:"豐田"},
-    { title: '出廠年月',  value:"101/03"},
-    { title: '顏色',  value:"白"},
-    { title: '車種',  value:"自用小客車"},
-    { title: '總排氣量(馬力)',  value:"1399cc"},
+    { title: '受處分漁船ID', value:"CT 25632"},
+    { title: '受處分人中文姓名', value:"王大明"},
+    { title: '身分證字號', value:"A120589521"},
+    { title: '性別', value:"男"},
+    { title: '生日', value:"71/03/04"},
+    { title: '地址', value:"花蓮市中正路52號"},
+    { title: '查獲安檢所', value:"富基漁港安檢所"},
+    { title: '處分單位核准日期', value:"104/03/23"},
+    { title: '處分單位發文文號', value:"處份字第1252531號"},
+    
+    
 ]
-
-
-
 
 
 const spanIcon = {

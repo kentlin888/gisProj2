@@ -24,8 +24,9 @@ import MISACarViolation from './page/MISACarViolation'
 import MISAPersonCarsInfo from './page/MISAPersonCarsInfo'
 import MISABoatInfo from './page/MISABoatInfo'
 import MISABoatCrewsInfo from './page/MISABoatCrewsInfo'
+import MISABoatCrewsInfoByPID from './page/MISABoatCrewsInfoByPID'
 // import MISABoatCaptonCrewsInfo from './page/MISABoatCaptonCrewsInfo'
-// import MISABoatViolation from './page/MISABoatViolation'
+import MISABoatViolation from './page/MISABoatViolation'
 
 import {
     BrowserRouter as Router,
@@ -82,6 +83,11 @@ export default () => {
 
                         <Route path="/MISABoatInfo" component={MISABoatInfo} />
                         <Route path="/MISABoatCrewsInfo" component={MISABoatCrewsInfo} />
+                        <Route path="/MISABoatCrewsInfoByPID" component={MISABoatCrewsInfoByPID} />
+                        <Route path="/MISABoatViolation" component={MISABoatViolation} />
+                        
+
+                        
                         {/* <Route path="/MISABoatCaptonCrewsInfo" component={MISABoatCaptonCrewsInfo} />
                         <Route path="/MISABoatViolation" component={MISABoatViolation} /> */}
                         

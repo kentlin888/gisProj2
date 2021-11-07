@@ -14,17 +14,24 @@ function Editable() {
     const [selectedRow, setSelectedRow] = useState(null);
 
     let sampleData = {
-        CardId: "ABC-1234", ETagId: "SX25847897", ParkingLocation: "信義路三段153號", ParkingDateTime: "2020/10/01 15:32:31",
-        Longitude: "25.23153", Latitude:"120.253125",CityName:"臺北市"
+        CardId: "ABC-1234", 
+        CardType: "汽車", //汽車/機車
+        parkingInOut: "出", //進/出
+        ParkingDate: "2020/10/01",
+        ParkingTime: "15:32:31",
+        parkingPlace: "信義路三段153號", 
+        CityName:"臺北市"
     }
     const [columns, setColumns] = useState([
         { title: '車牌', field: 'CardId' },
-        // { title: '停車日期', field: 'PassDateTime' },
-        { title: '停車時間', field: 'ParkingDateTime' },
+        { title: '種類', field: 'CardType' },
+        { title: '進/出', field: 'parkingInOut' },
+        { title: '停車日期', field: 'ParkingDate' },
+        { title: '停車時間', field: 'ParkingTime' },
         // { title: 'ETag號碼', field: 'ETagId' },
-        { title: '停車位置', field: 'ParkingLocation' },
-        { title: '經度', field: 'Longitude'},
-        { title: '緯度', field: 'Latitude'},
+        { title: '停車地點', field: 'parkingPlace' },
+        // { title: '經度', field: 'Longitude'},
+        // { title: '緯度', field: 'Latitude'},
         { title: '所屬縣市', field: 'CityName'},
         // { title: '簽證進港時間', field: 'StationDateIn'},
         // { title: '行經時間', field: 'PassDateTime' },
